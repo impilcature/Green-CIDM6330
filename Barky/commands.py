@@ -3,8 +3,13 @@ This module utilizes the command pattern - https://en.wikipedia.org/wiki/Command
 specify and implement the business logic layer
 """
 import sys
-from abc import ABC, abstractmethod
 from datetime import datetime
+
+try:
+    from collections.abc import ABC, abstractmethod
+except ImportError:
+    from abc import ABC, abstractmethod
+
 
 import requests
 

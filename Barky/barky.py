@@ -85,12 +85,7 @@ def get_user_input(label, required=True):
     return value
 
 
-def get_new_bookmark_data():
-    return {
-        "title": get_user_input("Title"),
-        "url": get_user_input("URL"),
-        "notes": get_user_input("Notes", required=False),
-    }
+cd
 
 
 def get_bookmark_id_for_deletion():
