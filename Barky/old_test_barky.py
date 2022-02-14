@@ -12,12 +12,11 @@ class Test_ProductTestCase():
         pass
 
 def test_clear_screen():
-    ran = barky.clear_screen()
-    #assert ran == NULL
-    pass
-
+    clear = "cls" if os.name == "nt" else "clear"
+    assert clear == 'cls'
+    
 def test_get_user_input(monkeypatch):
-    uInput = 'a'
+    uInput = 'Title'
     monkeypatch.setattr('sys.stdin', uInput)
     assert barky.get_user_input() == 'A'
 
